@@ -1,0 +1,13 @@
+echo "Enter the City Name "
+a=1
+while [ $a -lt 6 ]
+do 
+read city1
+echo $city1 >> city2.txt
+a=`expr $a + 1`
+done 
+
+sed -i  's/new/old/g'  city2.txt
+
+cp city2.txt old_cities.txt
+
